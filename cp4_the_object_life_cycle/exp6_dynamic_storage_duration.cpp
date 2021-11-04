@@ -14,7 +14,7 @@
 int main (){
     int *my_int_ptr = new int;
 
-    int *my_other_int_ptr = new int{42};
+    int *my_other_int_ptr = new int{42};    // Initializes dynamic object to 42
 
     delete my_int_ptr;
 
