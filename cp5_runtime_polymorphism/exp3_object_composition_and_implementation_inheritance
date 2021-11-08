@@ -1,0 +1,12 @@
+Object Composition and Implementation Inheritance
+
+Object composition is a design pattern where a class contains members of other class types. An alternate, antiquated
+design pattern called implementation inheritance achieves runtime polymorphism.
+
+Implementation inheritance allows you to build hierarchies of classes; each child inherits functionality from its
+parents. Over the years, accumulated experience with implementation inheritance has convinced many that it's an
+anti-pattern. For example, Go and Rust - two new and increasingly popular system-programming languages - have zero
+support for implementation inheritance. A brief discussion of implementation inheritance is warranted for two reasons:
+    1. You might encounter it infecting legacy code.
+    2. The quirky way you define C++ interfaces has shared lineage with implementation inheritance, so you will be
+       familiar with the mechanics anyway.
