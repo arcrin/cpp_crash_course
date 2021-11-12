@@ -1,0 +1,6 @@
+In this chapter, you learned how to define interfaces, the central role that virtual functions play in making
+inheritance work, and some general rules for using constructor and property injector. Whichever approach you choose,
+the combination of interface inheritance and composition provides sufficient flexibility for most runtime polymorphic
+applications. You can achieve type-safe runtime polymorphism with little or no overhead. Interfaces encourage
+encapsulation and loosely coupled design. With simple, focused interfaces, you can encourage code reuse by making your
+code portable across projects.
