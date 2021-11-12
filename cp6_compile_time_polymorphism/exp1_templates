@@ -1,0 +1,12 @@
+Templates
+
+C++ achieves compile time polymorphism through templates. A template is a class or function with template parameters.
+These parameters can stand in for any type, including fundamental and user-defined types. When the compiler sees a
+template used with a type, it stamps out a bespoke template instantiation.
+
+Template instantiation is the process of creating a class or a function from a template. Somewhat confusingly, you can
+also refer to "a template instantiation" as the result of the template instantiation process. Template instantiations
+are sometimes called concrete classes and concrete types.
+
+The big idea is that, rather than copying and pasting common code all over the place, you write a single template;
+the compiler generates new template instances when it encounters a new combination of types in the template parameters.

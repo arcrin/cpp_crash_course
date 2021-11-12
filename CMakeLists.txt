@@ -4,5 +4,5 @@ project(cpp_crash_course)
 set(CMAKE_CXX_STANDARD 20)
 
 add_executable(cpp_crash_course
-        cp5_runtime_polymorphism/exp14_choosing_constructor_or_property_injection.cpp
+        cp6_compile_time_polymorphism/exp2_declaring_templates.cpp
         )
