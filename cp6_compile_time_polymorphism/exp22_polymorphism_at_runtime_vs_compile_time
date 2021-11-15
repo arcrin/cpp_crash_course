@@ -1,0 +1,8 @@
+When you want polymorphism, you should use templates. But sometimes you can't use templates because you won't know the
+types used with your code until runtime. Remember that template instantiation only occurs when you pair a template's
+parameters with types. At this point, the compiler can instantiate a custom class for you. In some situations, you might
+not  be able to perform such pairing at until your program is executing (or at leas, performing such pairing at compile
+time would be tedious).
+
+In such cases, you can use runtime polymorphism. Whereas the template is the mechanism for achieving compile-time
+polymorphism, the runtime mechanism is the interface.
