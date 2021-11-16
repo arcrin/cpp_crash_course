@@ -4,5 +4,5 @@ project(cpp_crash_course)
 set(CMAKE_CXX_STANDARD 20)
 
 add_executable(cpp_crash_course
-        cp7_expressions/exp5_overliading_operator_new.cpp
+        cp7_expressions/exp5_overloading_operator_new.cpp
         )
