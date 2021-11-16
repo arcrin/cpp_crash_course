@@ -4,5 +4,5 @@ project(cpp_crash_course)
 set(CMAKE_CXX_STANDARD 20)
 
 add_executable(cpp_crash_course
-        cp6_compile_time_polymorphism/exp21_variadic_templates.cpp
+        cp7_expressions/exp5_overliading_operator_new.cpp
         )
