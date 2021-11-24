@@ -4,5 +4,5 @@ project(cpp_crash_course)
 set(CMAKE_CXX_STANDARD 20)
 
 add_executable(cpp_crash_course
-        cp8_statements/exp12_range_expression.cpp
+        cp9_functions/exp20_alphabet_histogram.cpp
         )
