@@ -7,7 +7,7 @@
 
 int main() {
     int32_t* pInt;
-    int32_t addr = 0;
+    int32_t addr = 0;z
     pInt = &addr;
     *pInt |= 1 << 0;
     *pInt &= (0 << 0);
