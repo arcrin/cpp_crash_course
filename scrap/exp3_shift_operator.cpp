@@ -15,10 +15,10 @@ int main() {
 //    printf("%d", (temp >> 2) & 0x00000001);
     uint16_t temp16{0};
     printf("%d\n", temp16);
-    temp16 |= (0x1 << 4);
+//    temp16 |= (0x1 << 4);
+//    printf("%d\n", temp16);
+//    temp16 |= (0x1 << 5);
     printf("%d\n", temp16);
-    temp16 |= (0x1 << 5);
-    printf("%d\n", temp16);
-    temp16 &= ~(0x1 << 4);
-    printf("%d", temp16);
+    temp16 &= ~(0x3 << 12 * 2);
+    printf("%d", (0x3 << 12 * 2));
 }
