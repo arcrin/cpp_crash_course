@@ -3,7 +3,7 @@
 //
 
 int mani(){
-    *int p = null;
+    int *p = nullptr;
     *p = 10; //this won't work as there is no memory backing up this pointer
     p = new int;
     *p = 10;
