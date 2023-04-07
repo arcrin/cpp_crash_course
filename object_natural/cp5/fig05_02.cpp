@@ -9,7 +9,7 @@ using namespace std;
 
 int main() {
     // engine that produces random numbers
-    default_random_engine engine{};
+    default_random_engine engine{42};
 
     // distribution that produces the int values 1-6 with equal likelihood
     uniform_int_distribution randomDie{1, 6};
