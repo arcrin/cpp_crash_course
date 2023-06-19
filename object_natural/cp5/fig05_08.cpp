@@ -7,7 +7,7 @@
 using namespace std;
 
 int squareByValue(int number); // prototype (for value pass)
-void squareByReference(int number); // prototype (for reference pass)
+void squareByReference(int& number); // prototype (for reference pass)
 
 int main() {
     int x{2}; // value to square using squareByValue
@@ -34,6 +34,6 @@ int squareByValue(int number) {
 
 // squareByReference multiplies nymberRef by itself and stores the result
 // in the variable to which numberRef refers in function main
-void squareByReference(int numberRef) {
+void squareByReference(int& numberRef) {
     numberRef *= numberRef; // caller's argument modified
 }
