@@ -5,7 +5,7 @@
 #ifndef CPP_CRASH_COURSE_MAXIMUM_H
 #define CPP_CRASH_COURSE_MAXIMUM_H
 
-template <typename T> // or template <class T>
+template <typename T>
 T maximum(T value1, T value2, T value3) {
     T maximumValue{value1}; // assume value 1 is maximum
 

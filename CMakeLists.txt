@@ -17,7 +17,7 @@ set_target_properties(BigNumber PROPERTIES
 )
 
 add_executable(cpp_crash_course
-       object_natural/cp5/fig05_08.cpp)
+       object_natural/cp5/fig05_14.cpp)
 
 target_link_libraries(cpp_crash_course
         fmt
