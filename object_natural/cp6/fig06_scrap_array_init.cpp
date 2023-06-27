@@ -8,11 +8,9 @@
 
 
 int main() {
-    std::array<int, 5> values;
+    std::array<int, 5> values{};
 
-    for (size_t i{0}; i < values.size(); ++i) {
-        std::cout << fmt::format("{:>7}{:>10}\n", "Element", "Value");
-    }
+    std::cout << fmt::format("{:>7}{:>10}\n", "Element", "Value");
 
     for (size_t i{0}; i < values.size(); ++i) {
         std::cout << fmt::format("{:>7}{:>10}\n", i, values[i]);

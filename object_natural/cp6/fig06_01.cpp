@@ -7,12 +7,13 @@
 #include <array>
 
 int main() {
-    std::array<int, 5> values{}; // values is an array of 5 int values
+    std::array<int, 5> values; // values is an array of 5 int values
 
     // initialize elements of array values to 0
-    for (size_t i{0}; i < values.size(); ++i) {
-        values[i] = 0;
-    }
+    // this is unnecessary, just use initialization list {}
+//    for (size_t i{0}; i < values.size(); ++i) {
+//        values[i] = 0;
+//    }
 
     std::cout << fmt::format("{:>7}{:>10}\n", "Element", "Value");
 

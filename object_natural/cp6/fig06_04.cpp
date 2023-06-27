@@ -7,18 +7,15 @@
 #include <array>
 
 int main() {
-    // constant can be used to specify array size
-    constexpr size_t arraySize{5}; // must initialize in declaration
+    constexpr size_t arraySize{5};
+    std::array<int, arraySize> values{};
 
-    std::array<size_t, arraySize> values{}; // array values has 5 elements
-
-    for (int i{0}; i < values.size(); ++i) {
+    for (size_t i{0}; i < values.size(); i++) {
         values.at(i) = 2 + 2 * i;
     }
 
-    // output contents of array values in tabular format
-    for (const size_t &value: values) {
+    for (const int &value: values) {
         std::cout << fmt::format("{} ", value);
     }
-    std::cout << "\n";
+    std::cout << '\n';
 }
