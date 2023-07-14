@@ -41,6 +41,18 @@ int main() {
     std::cout << "integers1 after iterative init: \n";
     outputVector(integers1);
 
+    // input and print integers1 and integers2
+    std::cout << "\nEnter 17 integers:\n";
+    inputVector(integers1);
+    inputVector(integers2);
+
+    std::cout << "\nAfter input, the vectors contain:\n"
+              << "integers1: ";
+    outputVector(integers1);
+    std::cout << "integers2: ";
+    outputVector(integers2);
+
+
     // overloaded assignment operator
     std::cout << "\nAssigning integers2 to integers1:\n";
     integers1 = integers2;
@@ -55,9 +67,26 @@ int main() {
     if (integers1 == integers2) {
         std::cout << "integers1 and integers2 are equal\n";
     }
-    integers2.at(1) = 2;
+    integers1.at(1) = 2;
+    std::cout << "Print integers1: \n";
     outputVector(integers1);
+    std::cout << "Print integers2: \n";
     outputVector(integers2);
+
+    // exception handling
+    try {
+        std::cout << "\nAttempt to display integers1.at(15)\n";
+        std::cout << integers1.at(15) << '\n';
+    }
+    catch (const std::out_of_range &ex) {
+        std::cout << "An exception occurred: " << ex.what() << '\n';
+    }
+
+    // changing the size of a vector
+    std::cout << "\nCurrent integers3 size is: " << integers3.size();
+    integers3.push_back(1000); // add 1000 to the end of the vector
+    std::cout << "\nNew integers3 size is: " << integers3.size() << "\nintegers3 now contains: ";
+    outputVector(integers3);
 }
 
 void outputVector(const std::vector<int> &items){

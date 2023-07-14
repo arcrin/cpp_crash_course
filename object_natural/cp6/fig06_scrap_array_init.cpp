@@ -15,4 +15,5 @@ int main() {
     for (size_t i{0}; i < values.size(); ++i) {
         std::cout << fmt::format("{:>7}{:>10}\n", i, values[i]);
     }
+//    std::cout << values[5]; // [] operator does not bound check
 }

@@ -17,7 +17,7 @@ set_target_properties(BigNumber PROPERTIES
 )
 
 add_executable(cpp_crash_course
-        object_natural/cp6/fig06_14_vector_class_template.cpp)
+    object_natural/cp8/fig08_10_create_sequential_file.cpp)
 
 target_link_libraries(cpp_crash_course
         fmt
