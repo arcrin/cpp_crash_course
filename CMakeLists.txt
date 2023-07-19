@@ -17,7 +17,7 @@ set_target_properties(BigNumber PROPERTIES
 )
 
 add_executable(cpp_crash_course
-        object_natural/cp8/fig08_12_ostringstream_object.cpp)
+        object_natural/cp8/fig08_15_titanic_dataset.cpp)
 
 target_link_libraries(cpp_crash_course
         fmt
