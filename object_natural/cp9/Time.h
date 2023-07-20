@@ -10,24 +10,24 @@
 // Time class definition
 class Time {
 public:
-    Time();
+//    Time();
 
-    explicit Time(int hour);
-
-    Time(int hour, int minute);
-
-    Time(int hour, int minute, int second);
-//    explicit Time(int hour = 0, int minute = 0, int second = 0); // this is made explicit because it can be called with one parameter
+//    explicit Time(int hour);
+//
+//    Time(int hour, int minute);
+//
+//    Time(int hour, int minute, int second);
+    explicit Time(int hour = 0, int minute = 0, int second = 0); // this is made explicit because it can be called with one parameter
 
 
     // set functions
-    void setTime(int hour, int minute, int second);
+    Time& setTime(int hour, int minute, int second);
 
-    void setHour(int hour);
+    Time& setHour(int hour);
 
-    void setMinute(int minute);
+    Time& setMinute(int minute);
 
-    void setSecond(int second);
+    Time& setSecond(int second);
 
     // get functions
     [[nodiscard]] int getHour() const;

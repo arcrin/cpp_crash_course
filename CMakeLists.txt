@@ -16,6 +16,8 @@ set_target_properties(BigNumber PROPERTIES
         INTERFACE_INCLUDE_DIRECTORIES "${CMAKE_CURRENT_SOURCE_DIR}/libraries/BigNumber/include"
 )
 
+message(${CMAKE_CURRENT_SOURCE_DIR})
+
 set(PROJECT_FILES
         object_natural/cp9/Time.cpp
         object_natural/cp9/Time.h
@@ -24,16 +26,17 @@ set(PROJECT_FILES
         object_natural/cp9/BadTimeClass.h
         object_natural/cp9/BadTimeClass.cpp
         object_natural/cp9/Date.h
-        object_natural/cp9/Date.cpp)
-
-add_executable(cpp_crash_course
-        ${PROJECT_FILES} object_natural/cp9/fig09_21_default_assignment_operator.cpp)
-
-target_include_directories(cpp_crash_course PRIVATE
-            ${CMAKE_CURRENT_SOURCE_DIR}/object_natural/cp9
+        object_natural/cp9/Date.cpp
+        object_natural/cp9/Employee.h
+        object_natural/cp9/Employee.cpp
         )
 
-target_link_libraries(cpp_crash_course
+
+add_executable(cpp_crash_course
+        ${PROJECT_FILES} object_natural/cp9/fig09_36_serialization.cpp)
+
+
+target_link_libraries(cpp_crash_course PRIVATE
         fmt
         BigNumber
 )
