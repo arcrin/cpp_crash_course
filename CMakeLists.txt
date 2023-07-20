@@ -16,8 +16,22 @@ set_target_properties(BigNumber PROPERTIES
         INTERFACE_INCLUDE_DIRECTORIES "${CMAKE_CURRENT_SOURCE_DIR}/libraries/BigNumber/include"
 )
 
+set(PROJECT_FILES
+        object_natural/cp9/Time.cpp
+        object_natural/cp9/Time.h
+        object_natural/cp9/CreateAndDestroy.h
+        object_natural/cp9/CreateAndDestroy.cpp
+        object_natural/cp9/BadTimeClass.h
+        object_natural/cp9/BadTimeClass.cpp
+        object_natural/cp9/Date.h
+        object_natural/cp9/Date.cpp)
+
 add_executable(cpp_crash_course
-        object_natural/cp8/fig08_15_titanic_dataset.cpp)
+        ${PROJECT_FILES} object_natural/cp9/fig09_21_default_assignment_operator.cpp)
+
+target_include_directories(cpp_crash_course PRIVATE
+            ${CMAKE_CURRENT_SOURCE_DIR}/object_natural/cp9
+        )
 
 target_link_libraries(cpp_crash_course
         fmt
