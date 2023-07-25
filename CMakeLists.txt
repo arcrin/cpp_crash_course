@@ -2,7 +2,9 @@ cmake_minimum_required(VERSION 3.24)
 project(cpp_crash_course)
 
 set(CMAKE_CXX_STANDARD 20)
-set(CMAKE_CXX_COMPILER g++)
+set(CMAKE_CXX_COMPILER C:/mingw64/bin/g++.exe)
+
+message(${CMAKE_CXX_COMPILER})
 
 add_library(fmt STATIC IMPORTED libraries/fmt/include/fmt/format.h)
 set_target_properties(fmt PROPERTIES
@@ -15,8 +17,6 @@ set_target_properties(BigNumber PROPERTIES
         IMPORTED_LOCATION "${CMAKE_CURRENT_SOURCE_DIR}/libraries/BigNumber/lib/libBigNumber.a"
         INTERFACE_INCLUDE_DIRECTORIES "${CMAKE_CURRENT_SOURCE_DIR}/libraries/BigNumber/include"
 )
-
-message(${CMAKE_CURRENT_SOURCE_DIR})
 
 set(PROJECT_FILES
         object_natural/cp9/Time.cpp
@@ -31,10 +31,12 @@ set(PROJECT_FILES
         object_natural/cp9/Employee.cpp
         )
 
-
 add_executable(cpp_crash_course
         ${PROJECT_FILES} object_natural/cp9/fig09_36_serialization.cpp)
 
+target_include_directories(cpp_crash_course PRIVATE
+        ${CMAKE_CURRENT_SOURCE_DIR}/libraries/cereal
+        )
 
 target_link_libraries(cpp_crash_course PRIVATE
         fmt
