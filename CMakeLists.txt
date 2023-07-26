@@ -1,10 +1,11 @@
-cmake_minimum_required(VERSION 3.24)
+cmake_minimum_required(VERSION 3.20)
 project(cpp_crash_course)
 
 set(CMAKE_CXX_STANDARD 20)
-set(CMAKE_CXX_COMPILER C:/mingw64/bin/g++.exe)
+set(CMAKE_CXX_COMPILER g++)
 
-message(${CMAKE_CXX_COMPILER})
+find_package(cereal CONFIG REQUIRED)
+link_directories("mnt/c/usr/local/include")
 
 add_library(fmt STATIC IMPORTED libraries/fmt/include/fmt/format.h)
 set_target_properties(fmt PROPERTIES
@@ -19,26 +20,14 @@ set_target_properties(BigNumber PROPERTIES
 )
 
 set(PROJECT_FILES
-        object_natural/cp9/Time.cpp
-        object_natural/cp9/Time.h
-        object_natural/cp9/CreateAndDestroy.h
-        object_natural/cp9/CreateAndDestroy.cpp
-        object_natural/cp9/BadTimeClass.h
-        object_natural/cp9/BadTimeClass.cpp
-        object_natural/cp9/Date.h
-        object_natural/cp9/Date.cpp
-        object_natural/cp9/Employee.h
-        object_natural/cp9/Employee.cpp
+        object_natural/cp10/SalariedEmployee.h
+        object_natural/cp10/SalariedEmployee.cpp)
+
+add_executable(${PROJECT_NAME}
+        ${PROJECT_FILES} object_natural/cp10/fig10_03_SalariedEmployee_class_test.cpp
         )
 
-add_executable(cpp_crash_course
-        ${PROJECT_FILES} object_natural/cp9/fig09_36_serialization.cpp)
-
-target_include_directories(cpp_crash_course PRIVATE
-        ${CMAKE_CURRENT_SOURCE_DIR}/libraries/cereal
-        )
-
-target_link_libraries(cpp_crash_course PRIVATE
+target_link_libraries(${PROJECT_NAME} PRIVATE
         fmt
         BigNumber
 )
