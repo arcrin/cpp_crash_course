@@ -21,11 +21,13 @@ set_target_properties(BigNumber PROPERTIES
 
 set(PROJECT_FILES
         object_natural/cp10/SalariedEmployee.h
-        object_natural/cp10/SalariedEmployee.cpp)
+        object_natural/cp10/SalariedEmployee.cpp
+        object_natural/cp10/SalariedCommissionEmployee.h
+        object_natural/cp10/SalariedCommissionEmployee.cpp)
 
 add_executable(${PROJECT_NAME}
-        ${PROJECT_FILES} object_natural/cp10/fig10_03_SalariedEmployee_class_test.cpp
-        )
+        ${PROJECT_FILES} 
+        object_natural/cp10/fig10_06_SalariedCommissionEmployee_test.cpp)
 
 target_link_libraries(${PROJECT_NAME} PRIVATE
         fmt
