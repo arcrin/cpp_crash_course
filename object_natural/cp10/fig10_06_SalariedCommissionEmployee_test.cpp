@@ -1,14 +1,14 @@
 //
 // Created by wbai on 7/26/2023.
 //
-#define FMT_HEADER_ONLY
+//#define FMT_HEADER_ONLY
 #include <fmt/format.h>
 #include <iostream>
 #include "SalariedCommissionEmployee.h"
 
 int main() {
     // instantiate SalariedCommissionEmployee object
-    SalariedCommissionEmployee employee{"Bob Lewis", 300.0, 5000.0, .04};
+    SalariedCommissionEmployee employee{"Bob Lewis", 300.0, 5000.0, 0.04};
 
     // get SalariedCommissionEmployee data
     std::cout << "Employee information obtained by get functions:\n"

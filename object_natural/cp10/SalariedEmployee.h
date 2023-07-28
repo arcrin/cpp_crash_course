@@ -18,8 +18,10 @@ public:
     void setSalary(double salary);
     [[nodiscard]]double getSalary() const;
 
-    double earnings() const;
-    [[nodiscard]] std::string toString() const;
+    [[nodiscard]] virtual double earnings() const;
+    [[nodiscard]] virtual std::string toString() const;
+
+    virtual ~SalariedEmployee() = default;
 
 private:
     std::string m_name{};

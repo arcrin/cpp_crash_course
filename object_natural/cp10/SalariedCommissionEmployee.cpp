@@ -10,9 +10,9 @@ SalariedCommissionEmployee::SalariedCommissionEmployee(std::string_view name,
                                                        double salary,
                                                        double grossSales,
                                                        double commissionRate)
-                                                       : SalariedEmployee{name, salary}{
-    setGrossSales(grossSales);
-    setCommissionRate(commissionRate);
+                                                       : SalariedEmployee{name, salary}, // base class initializer
+                                                       m_grossSales{grossSales},
+                                                       m_commissionRate{commissionRate}{
 }
 
 // set gross sales amount
@@ -30,8 +30,11 @@ double SalariedCommissionEmployee::getGrossSales() const {
 
 // return commission rate
 void SalariedCommissionEmployee::setCommissionRate(double commissionRate) {
-    return;
-    m_commissionRate;
+    m_commissionRate = commissionRate;
+}
+
+double SalariedCommissionEmployee::getCommissionRate() const {
+    return m_commissionRate;
 }
 
 // calculate earnings--uses SalariedEmployee::earnings()

@@ -20,9 +20,9 @@ public:
     void setCommissionRate(double commissionRate);
     [[nodiscard]] double getCommissionRate() const;
 
-    double earnings() const;
+    [[nodiscard]] double earnings() const override;
 
-    std::string toString() const;
+    [[nodiscard]] std::string toString() const override;
 
 private:
     double m_grossSales{0.0};

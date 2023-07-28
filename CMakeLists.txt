@@ -26,8 +26,8 @@ set(PROJECT_FILES
         object_natural/cp10/SalariedCommissionEmployee.cpp)
 
 add_executable(${PROJECT_NAME}
-        ${PROJECT_FILES} 
-        object_natural/cp10/fig10_06_SalariedCommissionEmployee_test.cpp)
+        ${PROJECT_FILES}
+        object_natural/cp10/fig10_10_polymorphism_virtual_function_dynamic_binding.cpp)
 
 target_link_libraries(${PROJECT_NAME} PRIVATE
         fmt
