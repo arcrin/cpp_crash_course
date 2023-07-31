@@ -3,12 +3,12 @@
 //
 #include <fmt/format.h>
 #include <iostream>
-#include "SalariedEmployee.h"
-#include "SalariedCommissionEmployee.h"
+#include "i_SalariedEmployee.h"
+#include "i_SalariedCommissionEmployee.h"
 
 int main() {
     // create base-class object
-    SalariedEmployee salaried{"Sue Jones", 500.0};
+    i_SalariedEmployee salaried{"Sue Jones", 500.0};
 
     // create derived-class object
     SalariedCommissionEmployee salariedCommission{
@@ -27,7 +27,7 @@ int main() {
               << "derived-class objects with dynamic binding\n\n";
 
     // assign base-class pointer at base-class object
-    SalariedEmployee *salariedPtr{&salaried};
+    i_SalariedEmployee *salariedPtr{&salaried};
     std::cout << fmt::format("{}\n{}:\n{}\n",
             "CALLING VIRTUAL FUNCTION TOSTRING WITH BASE-CLASS POINTER",
             "TO BASE-CLASS OBJECT INVOKES BASE-CLASS FUNCTIONALITY",

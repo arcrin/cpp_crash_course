@@ -2,15 +2,15 @@
 // Created by wbai on 7/26/2023.
 //
 
-#ifndef CPP_CRASH_COURSE_SALARIEDCOMMISSIONEMPLOYEE_H
-#define CPP_CRASH_COURSE_SALARIEDCOMMISSIONEMPLOYEE_H
+#ifndef CPP_CRASH_COURSE_I_SALARIEDCOMMISSIONEMPLOYEE_H
+#define CPP_CRASH_COURSE_I_SALARIEDCOMMISSIONEMPLOYEE_H
 #pragma once
 #include <string>
 #include <string_view>
-#include "SalariedEmployee.h"
+#include "i_SalariedEmployee.h"
 
 
-class SalariedCommissionEmployee : public SalariedEmployee {
+class SalariedCommissionEmployee : public i_SalariedEmployee {
 public:
     SalariedCommissionEmployee(std::string_view name, double salary, double grossSales, double commissionRate);
 
@@ -31,4 +31,4 @@ private:
 };
 
 
-#endif //CPP_CRASH_COURSE_SALARIEDCOMMISSIONEMPLOYEE_H
+#endif //CPP_CRASH_COURSE_I_SALARIEDCOMMISSIONEMPLOYEE_H

@@ -2,8 +2,8 @@
 // Created by wbai on 7/27/2023.
 //
 #include <string>
-#include "SalariedEmployee.h"
-#include "SalariedCommissionEmployee.h"
+#include "i_SalariedEmployee.h"
+#include "i_SalariedCommissionEmployee.h"
 
 int main() {
     SalariedCommissionEmployee salariedCommission{

@@ -4,7 +4,7 @@
 #define FMT_HEADER_ONLY
 #include <fmt/format.h>
 #include <iostream>
-#include "SalariedEmployee.h"
+#include "i_SalariedEmployee.h"
 
 int main() {
     SalariedEmployee employee{"Sue Jones", 300.0};

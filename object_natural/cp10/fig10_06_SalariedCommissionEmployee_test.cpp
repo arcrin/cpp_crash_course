@@ -4,7 +4,7 @@
 //#define FMT_HEADER_ONLY
 #include <fmt/format.h>
 #include <iostream>
-#include "SalariedCommissionEmployee.h"
+#include "i_SalariedCommissionEmployee.h"
 
 int main() {
     // instantiate SalariedCommissionEmployee object

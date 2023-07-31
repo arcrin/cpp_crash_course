@@ -4,8 +4,8 @@
 #define FMT_HEADER_ONLY
 #include <fmt/format.h>
 #include <iostream>
-#include "SalariedEmployee.h"
-#include "SalariedCommissionEmployee.h"
+#include "i_SalariedEmployee.h"
+#include "i_SalariedCommissionEmployee.h"
 
 int main() {
     // create base-class object

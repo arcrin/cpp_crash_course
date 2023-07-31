@@ -2,7 +2,7 @@
 // Created by wbai on 7/26/2023.
 //
 #define FMT_HEADER_ONLY
-#include "SalariedCommissionEmployee.h"
+#include "i_SalariedCommissionEmployee.h"
 #include <fmt/format.h>
 #include <stdexcept>
 
@@ -10,9 +10,9 @@ SalariedCommissionEmployee::SalariedCommissionEmployee(std::string_view name,
                                                        double salary,
                                                        double grossSales,
                                                        double commissionRate)
-                                                       : SalariedEmployee{name, salary}, // base class initializer
+                                                       : i_SalariedEmployee{name, salary}, // base class initializer
                                                        m_grossSales{grossSales},
-                                                       m_commissionRate{commissionRate}{
+                                                         m_commissionRate{commissionRate}{
 }
 
 // set gross sales amount
@@ -37,15 +37,15 @@ double SalariedCommissionEmployee::getCommissionRate() const {
     return m_commissionRate;
 }
 
-// calculate earnings--uses SalariedEmployee::earnings()
+// calculate earnings--uses i_SalariedEmployee::earnings()
 double SalariedCommissionEmployee::earnings() const {
-    return SalariedEmployee::earnings() + getGrossSales() * getCommissionRate();
+    return i_SalariedEmployee::earnings() + getGrossSales() * getCommissionRate();
 }
 
 // returns string representation of SalariedCommissionEmployee object
 std::string SalariedCommissionEmployee::toString() const {
     return fmt::format(
             "{}gross sales: ${:.2f}\ncommission rate: {:.2f}\n",
-            SalariedEmployee::toString(), getGrossSales(), getCommissionRate()
+            i_SalariedEmployee::toString(), getGrossSales(), getCommissionRate()
     );
 }
