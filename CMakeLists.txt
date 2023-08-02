@@ -20,17 +20,11 @@ set_target_properties(BigNumber PROPERTIES
 )
 
 set(PROJECT_FILES
-        object_natural/cp10/CompensationModel.h
-        object_natural/cp10/EmployeeFinal.h
-        object_natural/cp10/EmployeeFinal.cpp
-        object_natural/cp10/SalariedModel.h
-        object_natural/cp10/SalariedModel.cpp
-        object_natural/cp10/CommissionModel.h
-        object_natural/cp10/CommissionModel.cpp)
+)
 
 add_executable(${PROJECT_NAME}
         ${PROJECT_FILES}
-        object_natural/cp10/fig10_33_dependency_injection_test.cpp)
+        object_natural/cp11/fig11_01.cpp)
 
 target_link_libraries(${PROJECT_NAME} PRIVATE
         fmt
