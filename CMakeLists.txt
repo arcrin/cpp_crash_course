@@ -20,11 +20,13 @@ set_target_properties(BigNumber PROPERTIES
 )
 
 set(PROJECT_FILES
+        object_natural/cp11/MyArray.cpp
+        object_natural/cp11/MyArray.h
 )
 
 add_executable(${PROJECT_NAME}
         ${PROJECT_FILES}
-        object_natural/cp11/fig11_01.cpp)
+        object_natural/cp11/fig11_03_MyArray_test.cpp)
 
 target_link_libraries(${PROJECT_NAME} PRIVATE
         fmt

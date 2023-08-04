@@ -9,7 +9,7 @@
 
 int main() {
     std::string s1{"happy"};
-    std::string s2{"birthday"};
+    std::string s2{" birthday"};
     std::string s3;
     std::string_view v{"hello"};
 
@@ -42,4 +42,35 @@ int main() {
     s1 += ", have a great day!"s; // string-literal object
     std::cout << fmt::format(
             "s1 += \", have a great day!\"s yields\ns1 = {}\n\n", s1);
+
+    std::cout << fmt::format("{} {}\n{}\n\n",
+                             "The substring of s1 starting at location 0 for",
+                             "14 characters, s1.substr(0, 14), is:", s1.substr(0, 14));
+
+    std::cout << fmt::format("{} {}\n{}\n\n",
+                             "The substring of s1 starting at",
+                             "location 15, s1.substr(15), is:", s1.substr(15));
+
+    std::string s4{s1};
+    std::cout << fmt::format("s4 = {}\n\n", s4);
+
+    std::cout << "assigning s4 to s4\n";
+    s4 = s4;
+    std::cout << fmt::format("s4 = {}\n\n", s4);
+
+    std::cout << "initializing s5 with string_view v\n";
+    std::string s5{v};
+    std::cout << fmt::format("s5 is {}\n\n", s5);
+
+    s1[0] = 'H';
+    s1[6] = 'B';
+    std::cout << fmt::format("{}:\n{}\n\n", "after s1[0] = 'H' and s1[6] = 'B', s1 is", s1);
+
+    try {
+        std::cout << "Attempt to assign 'd' to s1.at(100) yields:\n";
+        s1.at(100) = 'd'; // ERROR: subscript out of range
+    }
+    catch (const std::out_of_range &ex) {
+        std::cout << fmt::format("An exception occurred: {}\n", ex.what());
+    }
 }
