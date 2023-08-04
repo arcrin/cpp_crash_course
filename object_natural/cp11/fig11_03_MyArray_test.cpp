@@ -51,7 +51,7 @@ int main() {
     std::cout << fmt::format("\nints3 size: {}\ncontents: ", ints3.size())
     << ints3 << '\n';
 #endif
-#if 0
+#if 1
     // use overloaded copy assignment (=) operator
     std::cout << "\n\nAssigning ints2 to ints1:\n";
     ints1 = ints2; // note target MyArray is smaller

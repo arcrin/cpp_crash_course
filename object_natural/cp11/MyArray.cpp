@@ -26,6 +26,13 @@ MyArray::MyArray(const MyArray &original)
     std::copy(std::begin(source), std::end(source), m_ptr.get());
 }
 
+// overloaded copy assignment (=) operator
+MyArray& MyArray::operator=(const MyArray& right) {
+    MyArray temp{right};
+    swap(*this, temp);
+    return *this;
+}
+
 MyArray::~MyArray() {
     std::cout << fmt::format("MyArray destroyed {}\n", static_cast<void*>(m_id));
 }
@@ -62,4 +69,9 @@ bool MyArray::operator==(const MyArray &right) const noexcept {
     std::span<const int> rhs{right.m_ptr.get(), right.m_size};
     return std::equal(std::begin(lhs), std::end(lhs),
                std::begin(rhs), std::end(rhs)); // std::equal can not take unique_ptr as argument
+}
+
+void swap(MyArray& a, MyArray& b) noexcept {
+    std::swap(a.m_size, b.m_size);
+    a.m_ptr.swap(b.m_ptr);
 }
