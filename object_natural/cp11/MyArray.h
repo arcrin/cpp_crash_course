@@ -26,7 +26,7 @@ public:
 
     ~MyArray(); // destructor
 
-    size_t size() const noexcept { return m_size; }
+    [[nodiscard]] size_t size() const noexcept { return m_size; }
     std::string toString() const; // create string representation
 
     // equality operator
@@ -52,7 +52,6 @@ public:
 private:
     size_t m_size{0}; // pointer-based array size
     std::unique_ptr<int[]> m_ptr; // smart pointer to integer array
-    int* m_id;
 };
 
 // overload operator << is not a friend, does not access private data

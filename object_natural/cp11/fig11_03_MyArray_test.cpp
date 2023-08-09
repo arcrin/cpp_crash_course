@@ -7,7 +7,7 @@
 #include "MyArray.h"
 
 // function to return a MyArray by value
-#if 0
+#if 1
 MyArray getArrayByValue() {
     MyArray localInts{10, 20, 30}; // create three-element MyArray
     return localInts; // return by value, creates a rvalue
@@ -19,7 +19,7 @@ int main() {
     MyArray ints1(7); // 7-element MyArray; note () rather than {}
     MyArray ints2(10); // 10-element MyArray; note () rather than {}
 #endif
-#if 1
+#if 0
     // print ints1 size and contents
     std::cout << fmt::format("\nints1 size: {}\ncontents: ", ints1.size())
               << ints1;
@@ -35,7 +35,7 @@ int main() {
 
     std::cout << "\nints1: " << ints1 << "\nints2: " << ints2 << '\n';
 #endif
-#if 1
+#if 0
     // use overloaded inequality (!=) operator
     std::cout << "\n\nEvaluating: ints1 != ints2\n";
 
@@ -66,7 +66,7 @@ int main() {
         std::cout << "ints1 and ints2 are equal\n";
     }
 #endif
-#if 0
+#if 1
     // use overloaded subscript operator to create an rvalue
     std::cout << fmt::format("ints1[5] is {}\n\n", ints1[5]);
 
@@ -84,7 +84,7 @@ int main() {
         std::cout << fmt::format("An exception occurred: {}\n", ex.what());
     }
 #endif
-#if 0
+#if 1
     // initialize ints4 with contents of the MyArray returned by
     // getArrayByValue; print size and contents
     std::cout << "\nInitialize ints4 with temporary MyArray object\n";
@@ -93,7 +93,7 @@ int main() {
     std::cout << fmt::format("\nints4 size: {}\ncontents: ", ints4.size())
               << ints4 << '\n';
 #endif
-#if 0
+#if 1
     // convert ints4 to a rvalue reference with std::move and
     // use the result to initialize MyArray ints5
     std::cout << "\n\nInitialize ints5 with result of std::move(ints4)\n";
@@ -119,15 +119,19 @@ int main() {
         std::cout << "\n\nints5 is empty\n";
     }
 #endif
-#if 0
+#if 1
     // add one to every element of ints4 using preincrement
     std::cout << "\nints4: " << ints4;
-    std::cout << "\npreincrementing ints4: " << ++ints4;
+    std::cout << "\npreincrement ints4: " << ++ints4 << '\n';
 
+#endif
+#if 1
     // add one to every element of ints4 using postincrement
-    std::cout << "\n\npostincrementing ints4: " << ints4++ << "\n";
-    std::cout << "\nints4 now contains: " << ints4;
+    std::cout << "\n\npostincrement ints4: " << ints4++ << "\n";
+    std::cout << "\nints4 now contains: " << ints4 << '\n';
 
+#endif
+#if 1
     // add a value to every element of ints4 using +=
     std::cout << "\n\nAdd 7 to every ints4 element: " << (ints4 += 7)
               << "\n";
