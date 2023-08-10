@@ -4,6 +4,8 @@ project(cpp_crash_course)
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_COMPILER g++)
 
+add_compile_definitions(FMT_HEADER_ONLY)
+
 link_directories("mnt/c/usr/local/include")
 
 add_library(fmt STATIC IMPORTED libraries/fmt/include/fmt/format.h)
@@ -19,13 +21,12 @@ set_target_properties(BigNumber PROPERTIES
 )
 
 set(PROJECT_FILES
-        object_natural/cp11/MyArray.cpp
-        object_natural/cp11/MyArray.h
+        object_natural/cp12/DivideByZeroException.h
 )
 
 add_executable(${PROJECT_NAME}
         ${PROJECT_FILES}
-        object_natural/cp11/fig11_07_single_argument_construction_implicit_conversions.cpp)
+        object_natural/cp13/fig13_01_input_output_with_iterators.cpp)
 
 target_link_libraries(${PROJECT_NAME} PRIVATE
         fmt
