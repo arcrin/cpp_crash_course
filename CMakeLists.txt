@@ -26,7 +26,7 @@ set(PROJECT_FILES
 
 add_executable(${PROJECT_NAME}
         ${PROJECT_FILES}
-        object_natural/cp13/fig13_01_input_output_with_iterators.cpp)
+        object_natural/cp14/fig14_18_views.cpp)
 
 target_link_libraries(${PROJECT_NAME} PRIVATE
         fmt
