@@ -21,12 +21,13 @@ set_target_properties(BigNumber PROPERTIES
 )
 
 set(PROJECT_FILES
-        object_natural/cp12/DivideByZeroException.h
+        object_natural/cp15/Stack.h
+        object_natural/cp15/Stack.cpp
 )
 
 add_executable(${PROJECT_NAME}
         ${PROJECT_FILES}
-        object_natural/cp14/fig14_18_views.cpp)
+        scrap/exp12_concepts_requires_expression.cpp)
 
 target_link_libraries(${PROJECT_NAME} PRIVATE
         fmt
