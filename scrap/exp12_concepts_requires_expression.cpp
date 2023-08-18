@@ -60,6 +60,23 @@ auto evaluateCustomType(T &t) {
     t.printMessage();
 }
 
+template<typename T>
+requires requires(const T& t) {
+    std::ranges::begin(t);
+    std::ranges::end(t);
+}
+
+void printRange(const T& range) {
+    for (const auto &item: range) {
+        std::cout << item << " ";
+    }
+}
+
+template<typename Iterator>
+concept PostIncrementable = requires(Iterator it) {
+    {it++} -> std::same_as<Iterator>;
+};
+
 int main() {
     std::vector<int> numbers{1, 2, 3, 4, 5};
     SampleClass sc{};
@@ -69,4 +86,5 @@ int main() {
     std::cout << calculateSum(1, 2) << "\n";
 
     evaluateCustomType(sc);
+
 }

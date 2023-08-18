@@ -23,11 +23,13 @@ set_target_properties(BigNumber PROPERTIES
 set(PROJECT_FILES
         object_natural/cp15/Stack.h
         object_natural/cp15/Stack.cpp
+        object_natural/cp15/MyArray.cpp
+        object_natural/cp15/MyArray.h
 )
 
 add_executable(${PROJECT_NAME}
         ${PROJECT_FILES}
-        scrap/exp12_concepts_requires_expression.cpp)
+        scrap/tetris.cpp)
 
 target_link_libraries(${PROJECT_NAME} PRIVATE
         fmt
