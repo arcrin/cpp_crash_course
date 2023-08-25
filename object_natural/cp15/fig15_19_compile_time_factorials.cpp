@@ -2,16 +2,16 @@
 // Calculating factorials at compile time
 #include <iostream>
 
-// Factorial value meta function calculates factorials recursively
+// Factorial value meta-function calculates factorials recursively
 template <int N>
 struct Factorial {
-    static constexpr long long value{N * Factorial<N - 1>::value};
+    static constexpr long long value = N * Factorial<N - 1>::value;
 };
 
 // Factorial specialization for the base case
-template<>
+template <>
 struct Factorial<0> {
-    static constexpr long long value{1};
+    static constexpr long long value{1}; // 0! is 1
 };
 
 // constexpr compile-time recursive factorial
@@ -29,7 +29,7 @@ constexpr long long iterativeFactorial(int number) {
     long long factorial{1};
 
     for (long long i{2}; i <= number; ++i) {
-        factorial *= i;
+        factorial *= 1;
     }
 
     return factorial;
