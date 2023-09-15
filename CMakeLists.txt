@@ -28,7 +28,7 @@ set(PROJECT_FILES
 
 add_executable(${PROJECT_NAME}
         ${PROJECT_FILES}
-        object_natural/cp15/fig15_21_type_metafunctions.cpp)
+        scrap/macro_test.cpp)
 
 target_link_libraries(${PROJECT_NAME} PRIVATE
         fmt
