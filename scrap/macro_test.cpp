@@ -4,6 +4,20 @@
 #include <fmt/format.h>
 #include <iostream>
 #define ENUM_CASE(name) case name: return #name;
+#define MAKE_ENUM(type, ...) \
+enum type {                  \
+    __VA_ARGS__              \
+};                           \
+constexpr const char *       \
+to_cstring(type_e)           \
+{                            \
+    using enum type;         \
+    switch (_e) {            \
+    FOR_EACH(ENUM_CASE, __VA_ARGS__) \
+    default:                 \
+        return "unknown";    \
+    }                        \
+}
 
 enum Color {RED, GREEN, BLUE};
 
