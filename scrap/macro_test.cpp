@@ -4,20 +4,12 @@
 #include <fmt/format.h>
 #include <iostream>
 #define ENUM_CASE(name) case name: return #name;
-#define MAKE_ENUM(type, ...) \
-enum type {                  \
-    __VA_ARGS__              \
-};                           \
-constexpr const char *       \
-to_cstring(type_e)           \
-{                            \
-    using enum type;         \
-    switch (_e) {            \
-    FOR_EACH(ENUM_CASE, __VA_ARGS__) \
-    default:                 \
-        return "unknown";    \
-    }                        \
-}
+#define OL 123              // Object like macro
+#define FL(x) ((x) + 1)     // Function like macro
+#define ID(arg) arg
+#define PARENS ()
+#define F_AGAIN() F
+#define F() f F_AGAIN PARENS()
 
 enum Color {RED, GREEN, BLUE};
 
@@ -32,7 +24,7 @@ const char* ColorToString(Color color) {
 }
 
 int main() {
-    Color color = GREEN;
-    const char *colorName = ColorToString(color);
-    std::cout << fmt::format("Color: {}\n", colorName);
+//    Color color = GREEN;
+//    const char *colorName = ColorToString(color);
+//    std::cout << fmt::format("Color: {}\n", colorName);
 }
