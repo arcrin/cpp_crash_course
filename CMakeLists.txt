@@ -28,7 +28,7 @@ set(PROJECT_FILES
 
 add_executable(${PROJECT_NAME}
         ${PROJECT_FILES}
-        scrap/macro_test.cpp)
+        scrap/macro_advanced_test.cpp)
 
 target_link_libraries(${PROJECT_NAME} PRIVATE
         fmt
