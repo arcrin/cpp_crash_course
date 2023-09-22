@@ -71,9 +71,9 @@ void test(MyType e) {
 }
 
 int main() {
-//    test(ZERO);
-//    test(ONE);
-//    test(TWO);
-//    test(THREE);
+    test(ZERO);
+    test(ONE);
+    test(TWO);
+    test(THREE);
 }
 
