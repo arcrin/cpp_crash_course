@@ -1,6 +1,4 @@
-//
-// Created by wbai on 9/19/2023.
-//
+// macro magic from https://www.scs.stanford.edu/~dm/blog/va-opt.html
 
 #include <iostream>
 
@@ -73,9 +71,9 @@ void test(MyType e) {
 }
 
 int main() {
-    test(ZERO);
-    test(ONE);
-    test(TWO);
-    test(THREE);
+//    test(ZERO);
+//    test(ONE);
+//    test(TWO);
+//    test(THREE);
 }
 
